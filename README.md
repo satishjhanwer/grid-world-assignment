@@ -140,11 +140,12 @@ I applied epsilon-greedy Q-learning with:
 
 ### Part 2: Environment Setup
 
-- Grid size: 5x10
+- Grid size: 5x11
 - Start: (1, 1)
-- Goal: (5, 10), Reward = **+5**
-- Trap: (4, 6), Reward = **–5**
-- Obstacles: (2,3), (3,3), (4,3), (3,8), (3,9), (5,8)
+- Goal: (5, 11), Reward = **+5**
+- Trap: (4, 7), Reward = **–5**
+- Tunnels: ((3, 5), (3, 6))
+- Obstacles: (2,3), (3,3), (4,3), (3,9), (3,10), (5,9)
 - Stepping outside the grid yields a reward of –1; all other moves yield 0.
 - Learning rate (alpha): **0.1**
 - Episodes: **200,000**
