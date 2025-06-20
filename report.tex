@@ -82,10 +82,10 @@ Gamma values tested: \(0.1, 0.5, 0.9\)
 
 \textbf{Interpretation:}
 \begin{itemize}
-  \item Gamma = 0.1 the agent strongly prefers immediate rewards and often ignores the goal's distant reward, resulting in short-sighted and suboptimal paths.
-  \item Gamma = 0.5 encourages the agent to recognize longer-term rewards, but it still occasionally diverges.
-  \item Gamma = 0.9 promotes long-term planning, enabling the agent to follow the most optimal and direct paths to the goal.
-  \item Gamma = 0.9 The step plot confirms that higher gamma values lead to smoother convergence due to better foresight.
+  \item Gamma = 0.1, the agent strongly prefers immediate rewards and often ignores the goal's distant reward, resulting in \mbox{short-sighted} and suboptimal paths.
+  \item Gamma = 0.5, encourages the agent to recognize longer-term rewards, but it still occasionally diverges.
+  \item Gamma = 0.9, promotes long-term planning, enabling the agent to follow the most optimal and direct paths to the goal.
+  \item Gamma = 0.9, The step plot confirms that higher gamma values lead to smoother convergence due to better foresight.
 \end{itemize}
 
 \subsection{Varying Epsilon - Fixed Gamma = 0.9}
@@ -130,11 +130,12 @@ Epsilon values tested: \(0.1, 0.3, 0.5\)
 
 \subsection{Environment Setup}
 \begin{itemize}
-  \item Grid size: 5x10
+  \item Grid size: 5x11
   \item Start: (1, 1)
-  \item Goal: (5, 10), Reward = \(+5\)
-  \item Trap: (4, 6), Reward = \(-5\)
-  \item Obstacles: (2,3), (3,3), (4,3), (3,8), (3,9), (5,8)
+  \item Goal: (5, 11), Reward = \(+5\)
+  \item Trap: (4, 7), Reward = \(-5\)
+  \item Tunnels: ((3, 5), (3, 6))
+  \item Obstacles: (2,3), (3,3), (4,3), (3,9), (3,10), (5,9)
   \item Stepping outside the grid yields a reward of \(-1\); all other moves yield 0.
   \item Learning rate (alpha): \(0.1\)
   \item Episodes: 200,000
